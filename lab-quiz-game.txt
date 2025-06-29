@@ -1,0 +1,49 @@
+** start of script.js **
+
+const questions = [
+  {
+    category: "Science",
+    question: "What planet is known as the Red Planet?",
+    choices: ["Mars", "Venus", "Jupiter"],
+    answer: "Mars"
+  },
+  {
+    category: "History",
+    question: "Who was the first President of the United States?",
+    choices: ["Abraham Lincoln", "George Washington", "Thomas Jefferson"],
+    answer: "George Washington"
+  },
+  {
+    category: "Geography",
+    question: "Which continent is the Sahara Desert located on?",
+    choices: ["Asia", "Africa", "Australia"],
+  answer: "Africa"
+  },
+  {
+    category: "Literature",
+    question: "Who wrote 'Romeo and Juliet'?",
+    choices: ["William Shakespeare", "Jane Austen", "Mark Twain"],
+    answer: "William Shakespeare"
+  },
+  {
+    category: "Math",
+    question: "What is the square root of 64?",
+    choices: ["6", "8", "10"],
+    answer: "8"
+  }
+];  
+function getRandomQuestion(questionsArray) {
+  const randomIndex = Math.floor(Math.random() * questionsArray.length);
+  return questionsArray[randomIndex];}
+function getRandomComputerChoice(choices) {
+  const randomIndex = Math.floor(Math.random() * choices.length);
+  return choices[randomIndex];
+}
+function getResults(questionObj, computerChoice) {
+  if (computerChoice === questionObj.answer) {
+    return "The computer's choice is correct!";
+  } else {
+    return `The computer's choice is wrong. The correct answer is: ${questionObj.answer}`;}}
+
+** end of script.js **
+
